@@ -1,0 +1,13 @@
+<div>
+  <h1>My Tasks</h1>
+  <div class="tasks">
+    <% @tasks.each do |task| %>
+    <div>
+      <input type="checkbox" id="task">
+      <label for="task"><%= link_to task.title, task_path(task) %></label>
+      <%= link_to "Delete", task_path(task), data: {turbo_method: :delete, turbo_confirm: "Delete #{task.title}?"} %>
+    </div>
+    <% end %>
+  </div>
+  <%= link_to "Add a new task", task_new_path %>
+</div>

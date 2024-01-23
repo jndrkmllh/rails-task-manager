@@ -1,0 +1,6 @@
+<%# Just type in er then tab for <% % > and pe then tab for <%= % >. %>
+<h1><%= @task.title%></h1>
+<p><%= @task.details %></p>
+
+<%= link_to "Edit this task", edit_task_path %>
+<%= link_to "Back to list", index_path %>
